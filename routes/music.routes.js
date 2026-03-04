@@ -9,6 +9,6 @@ const upload = multer({
     storage: multer.memoryStorage()
 });
 router.post('/upload',upload.single("music") , musiccontroller.createModel);
-
+router.post('/upload', musiccontroller.createAlbum);
 
 module.exports=router;
